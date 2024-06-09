@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Narayana</title>
+		<style>
+			#a{
+	background-color:blue;
+	color:white;
+	width:900px;
+		margin:50px 50px 50px 50px;
+		font-size:30px;
+		<!-- border-color:orange; -->
+		<!-- border-width:7px; -->
+		<!-- border-style:solid; -->
+		}
+		
+		input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color:red;
+  color:white;
+  font-size:40px;
+}
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color:red;
+  color:white;
+  font-size:40px;}
+  #r{
+	size:12px;
+  }
+		</style>
+</head>
+	<body id="a">
+		<table >
+		
+		<h5 Style="color:Black">Gram Calculator</h5>
+		<label for="Third">Enter the Product Prize:</label>
+		<input type="number" name="Third" id="Third" step="any"/><br><br>
+		<label for="f">Enter the Coustmer Prize:</label>
+		<input type="number" name="f" id="f" step="any"/>
+				
+		<br>
+		<br>
+		<button style="font-size:40px;background-color:pink" onclick="CGram()">CGram</button>
+		<input type="text" name="" id="r" readonly="" /><br><br>
+		
+		<label for="fi">Enter the Coustmer Gram:</label>
+		<input type="number" name="fi" id="fi" step="any"/>
+		
+		<br>
+		<br>
+		<button style="font-size:40px;background-color:pink" onclick="CPrize()">CPrize</button>
+		<input type="text" name="" id="ram" readonly="" />
+		
+		
+		<br>
+		<br>
+			<h5>Simple Calculator</h5>
+		<input type="number" name="first" id="first" step="any"/>
+			<select style="font-size:60px;background-color:pink" id="ope">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+		<input type="number" name="second" id="second" step="any"/>
+			<br/>
+			<br/>
+			<button style="font-size:40px;background-color:pink" onclick="Cal()">Calculate</button>
+		<input type="text" name="" id="res" readonly="" />
+		
+		<br>
+		<br>
+		</table>
+	</body>
+	<script type="text/javascript">
+		function Cal(){
+		var opr1 = document.getElementById("first").value;
+		var opr2 = document.getElementById("second").value;
+		var ope = document.getElementById("ope").value;
+		
+		if(ope=='+'){
+			var res = parseInt(opr1) + parseInt(opr2);
+			
+		}
+		if(ope=='-'){
+			var res = parseInt(opr1) - parseInt(opr2);
+			
+		}	
+		
+		 if(ope=='*'){
+			var res = parseInt(opr1) * parseInt(opr2);
+			
+
+		}
+		if(ope=='/'){
+			var res = parseFloat(opr1) / parseFloat(opr2);
+			
+
+		}
+		if(ope=='%'){
+			var res = parseFloat(opr1) % parseFloat(opr2);
+			
+
+		}
+		document.getElementById('res').value = res;
+		}
+		
+		function CGram(){
+			var prize = document.getElementById("Third").value;
+			var CGram = document.getElementById("f").value;
+			
+			
+			var r = 1000/parseFloat(prize);
+			var g = parseFloat(CGram)*parseFloat(r);
+			
+				document.getElementById('r').value = g;
+					}
+			function CPrize(){
+			var prize = document.getElementById("Third").value;
+			var CPrize = document.getElementById("fi").value;
+			
+			
+			var re = 1000/parseFloat(prize);
+			var gr = parseFloat(CPrize)/parseFloat(re);
+			
+				document.getElementById('ram').value = gr;
+					}
+
+	</script>
+</html>
